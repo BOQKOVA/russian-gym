@@ -119,3 +119,10 @@ a{color:inherit}
 .footer{border-top:var(--border);padding:28px 0;text-align:center;font-weight:600}
 .burst{position:fixed;z-index:99;pointer-events:none;font-size:1.6rem;font-weight:900;animation:fly 1.3s ease-out forwards}
 @keyframes fly{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+/* Back to index.html: arrow + favicon tile (arrow hidden on phones) */
+.header__home{display:flex;align-items:center;gap:12px}
+.home-btn{display:inline-flex;align-items:center;gap:6px;padding:3px 3px 3px 10px;border:var(--border);border-radius:999px;background:var(--surface);box-shadow:3px 3px 0 var(--ink);font-family:var(--font-display);font-size:.95rem;font-weight:800;text-decoration:none;white-space:nowrap;transform:rotate(2deg);transition:transform .12s,box-shadow .12s}
+.home-btn img{display:block;width:30px;height:30px}
+.home-btn:hover{transform:rotate(2deg) translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.home-btn:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
+@media (max-width:560px){.home-btn{padding:3px}.home-btn span{display:none}}

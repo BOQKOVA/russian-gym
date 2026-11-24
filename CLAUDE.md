@@ -33,7 +33,7 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
    - **Routing:** one page, switched by `location.hash`. A `VIEWS` object holds the views and `go()` renders the current one into `<main id="view">`. `shell()` wraps a lesson view, and `cleanup` is cleared on each view change.
    - **Games:** built with `mcRound()`, `wireChoices()`, `bar()`, `nextBtn()` and `keyChoices()`.
    - **XP:** `addXP()` and `burst()` handle points and the confetti burst.
-   - **Header:** `.brand` logo, `.nav` of `#hash` links, and the `★ XP` counter.
+   - **Header:** `.header__home` (`.home-btn` + `.brand` logo), `.nav` of `#hash` links, and the `★ XP` counter.
    - **Home view:** hero card, marquee, then a `.grid` of `.mode` cards.
 2. **Course pages (2):** casesGym (title "Russian Cases, One by One") and russianForRealLife. They use a different design (`--display`/`--body` font variables, `.top`/`.logo` header, `.view` sections) and **do not** load `core/`.
 
@@ -92,7 +92,8 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
 
 - `index.html` is the entry point. Gym pages are cards 01–11 under "Pick your gym", and the two course pages are cards 12–13 under "Courses".
 - **A new page must get a card in `index.html`.**
-- Not done yet: the pages don't link back to `index.html`. Each `.brand`/`.logo` link still points to that page's `#home` view.
+- Every page has a `.home-btn` back to `index.html` (an arrow plus the favicon "B" tile; the arrow is hidden at 560px and below). On Gym pages it sits with `.brand` inside `<div class="header__home">`, and its CSS is in `core/css/gym.css`. On course pages it comes before `.logo`, and its CSS is at the end of each page's own CSS, because they don't load `core/`. `.brand`/`.logo` still go to that page's `#home` view.
+- The `index.html` hero tile (`.hero__avatar`) shows the favicon "B" as an inline SVG path copied from `core/favi/favicon.svg`.
 
 ## Adding a new page
 
@@ -102,8 +103,9 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
    - don't redeclare `$`, `$$`, `shuffle`, `pick` or `esc`;
    - copy the per-page base rules listed above from an existing Gym page.
 3. Add the favicon block and give the page a unique localStorage prefix.
-4. Add a card to `index.html` and update the chip counts in its hero.
-5. Update this file.
+4. Copy the header's `.home-btn` link (back to `index.html`) from an existing page.
+5. Add a card to `index.html` and update the chip counts in its hero.
+6. Update this file.
 
 ## Checking changes
 

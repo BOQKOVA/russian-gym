@@ -206,3 +206,9 @@ footer{background:var(--ink);color:var(--pink);text-align:center;font-family:var
   .hero .sticker{display:none}
   .case-head .big{font-size:130px;opacity:.5}
 }
+/* Back to index.html: arrow + favicon tile (arrow hidden on phones) */
+.home-btn{flex:none;display:inline-flex;align-items:center;gap:6px;padding:3px 3px 3px 10px;border:var(--border);border-radius:999px;background:var(--surface);box-shadow:3px 3px 0 var(--ink);font-family:var(--display);font-weight:800;font-size:15px;text-decoration:none;white-space:nowrap;transform:rotate(2deg);transition:transform .12s,box-shadow .12s}
+.home-btn img{display:block;width:30px;height:30px}
+.home-btn:hover{transform:rotate(2deg) translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.home-btn:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
+@media (max-width:560px){.home-btn{padding:3px}.home-btn span{display:none}}
