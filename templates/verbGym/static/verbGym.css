@@ -95,3 +95,4 @@ button{font:inherit;color:inherit}
   .mem{gap:8px}
   .nav{order:3;width:100%}
 }
+.home-btn{background:var(--yellow)}

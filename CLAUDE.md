@@ -18,6 +18,7 @@ index.html                 First navigation page: links to every page
 static/index.css           Styles used only by index.html
 core/css/gym.css           Base CSS shared by the 11 Gym pages
 core/js/gym.js             Helpers shared by the 11 Gym pages: $, $$, shuffle, pick, esc
+core/js/transition.js      Falling-letters page transition, loaded by ALL 14 pages (index, gyms, courses)
 core/favi/                 Favicons (ico, svg, 16/32 png, apple-touch, 192/512 png)
 templates/<name>/<name>.html
 templates/<name>/static/<name>.css   page-only CSS
@@ -35,7 +36,7 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
    - **XP:** `addXP()` and `burst()` handle points and the confetti burst.
    - **Header:** `.header__home` (`.home-btn` + `.brand` logo), `.nav` of `#hash` links, and the `★ XP` counter.
    - **Home view:** hero card, marquee, then a `.grid` of `.mode` cards.
-2. **Course pages (2):** casesGym (title "Russian Cases, One by One") and russianForRealLife. They use a different design (`--display`/`--body` font variables, `.top`/`.logo` header, `.view` sections) and **do not** load `core/`.
+2. **Course pages (2):** casesGym (title "Russian Cases, One by One") and russianForRealLife. They use a different design (`--display`/`--body` font variables, `.top`/`.logo` header, `.view` sections) and **do not** load `core/`, except `core/js/transition.js`.
 
 ## Shared code rules (read before touching core/)
 
@@ -92,7 +93,8 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
 
 - `index.html` is the entry point. Gym pages are cards 01–11 under "Pick your gym", and the two course pages are cards 12–13 under "Courses".
 - **A new page must get a card in `index.html`.**
-- Every page has a `.home-btn` back to `index.html` (a 40px square with an inline-SVG house icon: pink on Gym pages, yellow on course pages because their `.logo` is pink). On Gym pages it sits with `.brand` inside `<div class="header__home">`, and its CSS is in `core/css/gym.css`. On course pages it comes before `.logo`, and its CSS is at the end of each page's own CSS, because they don't load `core/`. `.brand`/`.logo` still go to that page's `#home` view.
+- **Page transition** (`core/js/transition.js`): clicking a link to another page of the site (not a `#hash` link) plays an animation. Colourful Cyrillic letters and signs fall in, an ink curtain drops, and a sticker pops up: "домо́й!" when going to `index.html`, "пое́хали!" otherwise. The letter layout is handed to the next page through `sessionStorage` key `rg_transition`, where the letters fall away off the bottom. The script injects its own styles (classes `rg-tr*`). It must be loaded in `<head>` **without** `defer`, right after the page CSS, so the arriving page is covered before it first paints. It is skipped when the user prefers reduced motion.
+- Every page has a `.home-btn` back to `index.html` (a square with an inline-SVG house icon, sized to match the height, radius, shadow and tilt of the `.brand`/`.logo` next to it. It is pink on Gym pages, but yellow on Verb Gym and on the course pages, where the logo itself is pink). On Gym pages it sits with `.brand` inside `<div class="header__home">`, and its CSS is in `core/css/gym.css`. On course pages it comes before `.logo`, and its CSS is at the end of each page's own CSS, because they don't load `core/`. `.brand`/`.logo` still go to that page's `#home` view.
 - The `index.html` hero tile (`.hero__avatar`) shows the favicon "B" as an inline SVG path copied from `core/favi/favicon.svg`.
 
 ## Adding a new page
@@ -103,7 +105,7 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
    - don't redeclare `$`, `$$`, `shuffle`, `pick` or `esc`;
    - copy the per-page base rules listed above from an existing Gym page.
 3. Add the favicon block and give the page a unique localStorage prefix.
-4. Copy the header's `.home-btn` link (back to `index.html`) from an existing page.
+4. Copy the header's `.home-btn` link (back to `index.html`) from an existing page, and add `<script src="../../core/js/transition.js"></script>` at the end of `<head>`.
 5. Add a card to `index.html` and update the chip counts in its hero.
 6. Update this file.
 

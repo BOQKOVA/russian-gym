@@ -259,9 +259,9 @@ footer{background:var(--ink);color:var(--pink);text-align:center;font-family:var
 .s-btns button:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--surface)}
 .s-btns button.right{background:var(--green);border-color:var(--green)}
 .s-btns button.wrong{background:var(--red);border-color:var(--red)}
-/* Back to index.html: coloured square button with a house icon */
-.home-btn{flex:none;display:inline-grid;place-items:center;width:40px;height:40px;border:var(--border);border-radius:12px;background:var(--yellow);color:var(--ink);box-shadow:3px 3px 0 var(--ink);transform:rotate(-3deg);transition:transform .12s,box-shadow .12s}
+/* Back to index.html: coloured square with a house icon, same height, radius and shadow as .logo */
+.home-btn{flex:none;display:inline-grid;place-items:center;width:calc(18px*1.55 + 12px);height:calc(18px*1.55 + 12px);border:var(--border);border-radius:10px;background:var(--yellow);color:var(--ink);box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s}
 .home-btn svg{display:block}
-.home-btn:hover{transform:rotate(-3deg) translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
-.home-btn:active{transform:rotate(-3deg) translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.home-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.home-btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 .home-btn:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
