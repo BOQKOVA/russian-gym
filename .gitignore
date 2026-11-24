@@ -1,0 +1,29 @@
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# Claude Code: personal local settings
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editor temp/backup files
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies and local environment (not used yet, here for safety)
+node_modules/
+.env
+.env.*
