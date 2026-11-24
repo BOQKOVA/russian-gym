@@ -92,7 +92,7 @@ Folder names are camelCase (`casesGym`). Each HTML file is named after its folde
 
 - `index.html` is the entry point. Gym pages are cards 01–11 under "Pick your gym", and the two course pages are cards 12–13 under "Courses".
 - **A new page must get a card in `index.html`.**
-- Every page has a `.home-btn` back to `index.html` (an arrow plus the favicon "B" tile; the arrow is hidden at 560px and below). On Gym pages it sits with `.brand` inside `<div class="header__home">`, and its CSS is in `core/css/gym.css`. On course pages it comes before `.logo`, and its CSS is at the end of each page's own CSS, because they don't load `core/`. `.brand`/`.logo` still go to that page's `#home` view.
+- Every page has a `.home-btn` back to `index.html` (a 40px square with an inline-SVG house icon: pink on Gym pages, yellow on course pages because their `.logo` is pink). On Gym pages it sits with `.brand` inside `<div class="header__home">`, and its CSS is in `core/css/gym.css`. On course pages it comes before `.logo`, and its CSS is at the end of each page's own CSS, because they don't load `core/`. `.brand`/`.logo` still go to that page's `#home` view.
 - The `index.html` hero tile (`.hero__avatar`) shows the favicon "B" as an inline SVG path copied from `core/favi/favicon.svg`.
 
 ## Adding a new page

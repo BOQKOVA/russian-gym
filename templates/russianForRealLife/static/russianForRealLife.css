@@ -259,9 +259,9 @@ footer{background:var(--ink);color:var(--pink);text-align:center;font-family:var
 .s-btns button:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--surface)}
 .s-btns button.right{background:var(--green);border-color:var(--green)}
 .s-btns button.wrong{background:var(--red);border-color:var(--red)}
-/* Back to index.html: arrow + favicon tile (arrow hidden on phones) */
-.home-btn{flex:none;display:inline-flex;align-items:center;gap:6px;padding:3px 3px 3px 10px;border:var(--border);border-radius:999px;background:var(--surface);box-shadow:3px 3px 0 var(--ink);font-family:var(--display);font-weight:800;font-size:15px;text-decoration:none;white-space:nowrap;transform:rotate(2deg);transition:transform .12s,box-shadow .12s}
-.home-btn img{display:block;width:30px;height:30px}
-.home-btn:hover{transform:rotate(2deg) translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+/* Back to index.html: coloured square button with a house icon */
+.home-btn{flex:none;display:inline-grid;place-items:center;width:40px;height:40px;border:var(--border);border-radius:12px;background:var(--yellow);color:var(--ink);box-shadow:3px 3px 0 var(--ink);transform:rotate(-3deg);transition:transform .12s,box-shadow .12s}
+.home-btn svg{display:block}
+.home-btn:hover{transform:rotate(-3deg) translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.home-btn:active{transform:rotate(-3deg) translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .home-btn:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
-@media (max-width:560px){.home-btn{padding:3px}.home-btn span{display:none}}
