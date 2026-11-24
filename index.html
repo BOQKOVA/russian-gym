@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Russian Gym · Boqkova Teach</title>
+<link rel="icon" href="core/favi/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="core/favi/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="core/favi/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="core/favi/favicon-16.png">
+<link rel="apple-touch-icon" href="core/favi/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Golos+Text:wght@400..900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="core/css/gym.css">
+<link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">Russian Gym ✦</a>
+    <nav class="nav">
+      <a class="nav__link" href="#gyms">Gyms</a>
+      <a class="nav__link" href="#courses">Courses</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero-wrap"><div class="container"><div class="hero">
+    <div class="hero__media">
+      <div class="hero__avatar ru">Аа<br>Бб</div>
+      <span class="hero__sticker2">приве́т!</span>
+      <span class="hero__sticker">A1 ✦ A2</span>
+    </div>
+    <div>
+      <span class="hero__chip">Boqkova Teach</span>
+      <h1 class="hero__title">russian gym</h1>
+      <p class="hero__lead">Short lessons, then games until it sticks. Pick a gym and start your workout. <span class="ru">Учи́ться — э́то ве́село!</span></p>
+      <div class="hero__stats">
+        <span class="chip" style="background:var(--pink)">11 gyms</span>
+        <span class="chip">2 courses</span>
+        <span class="chip" style="background:var(--yellow)">A1–A2</span>
+        <span class="chip" style="background:var(--green)">games in every gym</span>
+      </div>
+      <div class="actions" style="justify-content:flex-start;margin-top:26px">
+        <a class="btn" href="templates/alphabetGym/alphabetGym.html">Start with the alphabet →</a>
+        <a class="btn btn--ghost" href="#gyms">Browse the gyms</a>
+      </div>
+    </div>
+  </div></div></section>
+
+  <div class="marquee">
+    <div class="marquee__track" aria-hidden="true"><span>🔤 алфави́т</span><span class="marquee__star">✦</span><span>🏠 существи́тельные</span><span class="marquee__star">✦</span><span>🙋 местоиме́ния</span><span class="marquee__star">✦</span><span>🏃 глаго́лы</span><span class="marquee__star">✦</span><span>⏳ времена́</span><span class="marquee__star">✦</span><span>🧩 паде́жи</span><span class="marquee__star">✦</span><span>🎨 прилага́тельные</span><span class="marquee__star">✦</span><span>🔢 чи́сла</span><span class="marquee__star">✦</span><span>🛒 разгово́р</span><span class="marquee__star">✦</span></div>
+    <div class="marquee__track" aria-hidden="true"><span>🔤 алфави́т</span><span class="marquee__star">✦</span><span>🏠 существи́тельные</span><span class="marquee__star">✦</span><span>🙋 местоиме́ния</span><span class="marquee__star">✦</span><span>🏃 глаго́лы</span><span class="marquee__star">✦</span><span>⏳ времена́</span><span class="marquee__star">✦</span><span>🧩 паде́жи</span><span class="marquee__star">✦</span><span>🎨 прилага́тельные</span><span class="marquee__star">✦</span><span>🔢 чи́сла</span><span class="marquee__star">✦</span><span>🛒 разгово́р</span><span class="marquee__star">✦</span></div>
+  </div>
+
+  <section class="section" id="gyms"><div class="container">
+    <h2 class="heading">Pick your gym</h2>
+    <p class="lead">Each gym is one topic: short lessons first, then games. New to Russian? Start with the alphabet and go in order.</p>
+    <div class="grid">
+      <a class="mode" href="templates/alphabetGym/alphabetGym.html">
+        <div class="mode__banner" style="--c:var(--pink)"><span class="mode__emoji">🔤</span><span class="mode__num">01</span></div>
+        <div class="mode__body"><h3 class="mode__title">Alphabet Gym</h3><p class="mode__sum">33 letters, 3 groups, and you already know some of them. Learn to read Russian.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/nounGym/nounGym.html">
+        <div class="mode__banner" style="--c:var(--blue)"><span class="mode__emoji">🏠</span><span class="mode__num">02</span></div>
+        <div class="mode__body"><h3 class="mode__title">Noun Gym</h3><p class="mode__sum">Everyday nouns by topic: gender, plural and meaning.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/pronounGym/pronounGym.html">
+        <div class="mode__banner" style="--c:var(--yellow)"><span class="mode__emoji">🙋</span><span class="mode__num">03</span></div>
+        <div class="mode__body"><h3 class="mode__title">Pronoun Gym</h3><p class="mode__sum">I, me, my, this: how Russian pronouns work and change.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/verbGym/verbGym.html">
+        <div class="mode__banner" style="--c:var(--green)"><span class="mode__emoji">🏃</span><span class="mode__num">04</span></div>
+        <div class="mode__body"><h3 class="mode__title">Verb Gym</h3><p class="mode__sum">Everyday Russian verbs. Learn them, then play until they stick.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/tenseGym/tenseGym.html">
+        <div class="mode__banner" style="--c:var(--lilac)"><span class="mode__emoji">⏳</span><span class="mode__num">05</span></div>
+        <div class="mode__body"><h3 class="mode__title">Tense Gym</h3><p class="mode__sum">Past, present and future: how each one works.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/reflexiveGym/reflexiveGym.html">
+        <div class="mode__banner" style="--c:var(--red)"><span class="mode__emoji">🪞</span><span class="mode__num">06</span></div>
+        <div class="mode__body"><h3 class="mode__title">Reflexive Gym</h3><p class="mode__sum">Wake up, get dressed, smile: everyday verbs that end in <span class="ru">-ся</span>.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/imperativeGym/imperativeGym.html">
+        <div class="mode__banner" style="--c:var(--pink)"><span class="mode__emoji">📣</span><span class="mode__num">07</span></div>
+        <div class="mode__body"><h3 class="mode__title">Imperative Gym</h3><p class="mode__sum">Read! Sit down, please! Let’s go! Commands, requests and invitations.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/describeGym/describeGym.html">
+        <div class="mode__banner" style="--c:var(--blue)"><span class="mode__emoji">🎨</span><span class="mode__num">08</span></div>
+        <div class="mode__body"><h3 class="mode__title">Describe Gym</h3><p class="mode__sum">Adjectives and adverbs: learn the difference, then play.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/comparativeGym/comparativeGym.html">
+        <div class="mode__banner" style="--c:var(--yellow)"><span class="mode__emoji">⚖️</span><span class="mode__num">09</span></div>
+        <div class="mode__body"><h3 class="mode__title">Comparative Gym</h3><p class="mode__sum">Bigger, faster, the best! Compare people and things.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/countGym/countGym.html">
+        <div class="mode__banner" style="--c:var(--green)"><span class="mode__emoji">🔢</span><span class="mode__num">10</span></div>
+        <div class="mode__body"><h3 class="mode__title">Count Gym</h3><p class="mode__sum">One table, two tables, five tables: nouns after numbers.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/connectGym/connectGym.html">
+        <div class="mode__banner" style="--c:var(--lilac)"><span class="mode__emoji">🔗</span><span class="mode__num">11</span></div>
+        <div class="mode__body"><h3 class="mode__title">Connect Gym</h3><p class="mode__sum">And, but, because, if, when: join your ideas into longer sentences.</p><span class="mode__go">Open →</span></div>
+      </a>
+    </div>
+  </div></section>
+
+  <section class="section" id="courses" style="padding-top:0"><div class="container">
+    <h2 class="heading">Courses</h2>
+    <p class="lead">Longer, step-by-step courses with exercises and games.</p>
+    <div class="grid">
+      <a class="mode" href="templates/casesGym/casesGym.html">
+        <div class="mode__banner" style="--c:var(--red)"><span class="mode__emoji">🧩</span><span class="mode__num">12</span></div>
+        <div class="mode__body"><h3 class="mode__title">Russian cases, one by one</h3><p class="mode__sum">Six cases, one at a time. Learn each one, practise with exercises, then play.</p><span class="mode__go">Open →</span></div>
+      </a>
+      <a class="mode" href="templates/russianForRealLife/russianForRealLife.html">
+        <div class="mode__banner" style="--c:var(--blue)"><span class="mode__emoji">🛒</span><span class="mode__num">13</span></div>
+        <div class="mode__body"><h3 class="mode__title">Russian for real life</h3><p class="mode__sum">Pick a situation: key phrases, a real dialogue, then play your part in a role play.</p><span class="mode__go">Open →</span></div>
+      </a>
+    </div>
+  </div></section>
+</main>
+
+<footer class="footer">
+  <div class="container">Boqkova Teach ✦ Russian Gym · <span class="ru">Учи́ться — э́то ве́село!</span></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alphabet Gym · The Russian alphabet for beginners</title>
+<link rel="icon" href="../../core/favi/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="../../core/favi/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../core/favi/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../core/favi/favicon-16.png">
+<link rel="apple-touch-icon" href="../../core/favi/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Golos+Text:wght@400..900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../core/css/gym.css">
+<link rel="stylesheet" href="static/alphabetGym.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#home">Alphabet Gym ✦</a>
+    <nav class="nav" id="nav">
+      <a class="nav__link" href="#home">Home</a>
+      <a class="nav__link" href="#lesson">Lesson</a>
+      <a class="nav__link" href="#reading">Reading rules</a>
+      <a class="nav__link" href="#alphabet">All 33 letters</a>
+      <a class="nav__link" href="#sounds">Sound quiz</a>
+      <a class="nav__link" href="#sort">Group sort</a>
+      <a class="nav__link" href="#read">Read &amp; guess</a>
+      <a class="nav__link" href="#type">Type it</a>
+      <a class="nav__link" href="#memory">Memory</a>
+      <a class="nav__link" href="#hunt">Letter hunt</a>
+      <a class="nav__link" href="#sayit">Say it right</a>
+    </nav>
+    <div class="header__tools">
+      <div class="seg" id="grpSeg" role="group" aria-label="Letter group">
+        <button data-g="1">Twins</button><button data-g="2">Tricksters</button><button data-g="3">New</button><button data-g="all">All</button>
+      </div>
+      <span class="xp" id="xp">★ 0 XP</span>
+    </div>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<footer class="footer">
+  <div class="container">Boqkova Teach ✦ Alphabet Gym · <span class="ru" id="footRu"></span></div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="icon-btn modal__close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="../../core/js/gym.js"></script>
+<script src="static/alphabetGym.js"></script>
+</body>
+</html>
